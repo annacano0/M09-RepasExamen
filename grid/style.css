@@ -1,0 +1,71 @@
+/*general settings*/
+.grid-container > header {
+  background-color: green;
+  grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+footer {
+  background-color: green;
+  grid-area: footer;
+}
+
+aside {
+  background-color: red;
+  grid-area: aside;
+}
+
+main > header {
+  background-color: pink;
+}
+
+.main-articles article{
+  background-color: yellow;
+}
+
+.bottom-articles article{
+  background-color: blue;
+}
+
+/*grid*/
+
+.grid-container {
+  min-height: 100vh; /*!!! IMPORTANT*/
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  grid-template-columns: 30% auto;
+  grid-template-rows: 5em auto 5em;
+  gap: 1em;
+}
+
+
+/* main */
+
+main{
+    display: grid;
+    grid-template-rows:1fr 1fr 1fr ;
+    gap: 1em;
+}
+
+/*big articles*/
+
+.main-articles{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+}
+
+.bottom-articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+}
+
+/*responsive settings*/
